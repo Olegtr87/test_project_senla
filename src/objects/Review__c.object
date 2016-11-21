@@ -56,56 +56,41 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Email__c</fullName>
-        <externalId>true</externalId>
-        <label>Email</label>
-        <required>true</required>
+        <fullName>Employee_Examinee__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee Examinee</label>
+        <referenceTo>Employee__c</referenceTo>
+        <relationshipLabel>Reviews (Employee Examinee)</relationshipLabel>
+        <relationshipName>Reviews1</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
-        <type>Email</type>
-        <unique>false</unique>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>First_Name__c</fullName>
+        <fullName>Employee_Revyuver__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
         <externalId>false</externalId>
-        <label>First Name</label>
-        <length>100</length>
+        <label>Employee Revyuver</label>
+        <referenceTo>Employee__c</referenceTo>
+        <relationshipLabel>Reviews</relationshipLabel>
+        <relationshipName>Reviews</relationshipName>
         <required>true</required>
         <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
+        <type>Lookup</type>
     </fields>
-    <fields>
-        <fullName>Last_Name__c</fullName>
-        <externalId>false</externalId>
-        <label>Last Name</label>
-        <length>100</length>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Password__c</fullName>
-        <externalId>false</externalId>
-        <label>Password</label>
-        <length>100</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <label>Employee</label>
+    <label>Review</label>
     <listViews>
         <fullName>All</fullName>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
     <nameField>
-        <displayFormat>Employee-{0000}</displayFormat>
-        <label>Employee Name</label>
-        <type>AutoNumber</type>
+        <label>Review Name</label>
+        <type>Text</type>
     </nameField>
-    <pluralLabel>Employees</pluralLabel>
+    <pluralLabel>Reviews</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

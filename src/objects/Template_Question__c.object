@@ -56,56 +56,43 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Email__c</fullName>
-        <externalId>true</externalId>
-        <label>Email</label>
-        <required>true</required>
+        <fullName>Question__c</fullName>
+        <externalId>false</externalId>
+        <label>Question</label>
+        <referenceTo>Question__c</referenceTo>
+        <relationshipLabel>Templates Questions</relationshipLabel>
+        <relationshipName>Templates_Questions</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
-        <type>Email</type>
-        <unique>false</unique>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>First_Name__c</fullName>
+        <fullName>Template__c</fullName>
         <externalId>false</externalId>
-        <label>First Name</label>
-        <length>100</length>
-        <required>true</required>
+        <label>Template</label>
+        <referenceTo>Template__c</referenceTo>
+        <relationshipLabel>Templates Questions</relationshipLabel>
+        <relationshipName>Templates_Questions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
-    <fields>
-        <fullName>Last_Name__c</fullName>
-        <externalId>false</externalId>
-        <label>Last Name</label>
-        <length>100</length>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Password__c</fullName>
-        <externalId>false</externalId>
-        <label>Password</label>
-        <length>100</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <label>Employee</label>
+    <label>Template Question</label>
     <listViews>
         <fullName>All</fullName>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
     <nameField>
-        <displayFormat>Employee-{0000}</displayFormat>
-        <label>Employee Name</label>
+        <displayFormat>TQ-{0000}</displayFormat>
+        <label>Template Question Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Employees</pluralLabel>
+    <pluralLabel>Templates Questions</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>
