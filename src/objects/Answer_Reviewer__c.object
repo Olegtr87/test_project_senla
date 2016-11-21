@@ -52,57 +52,42 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
-    <enableSearch>true</enableSearch>
+    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Employee_Examinee__c</fullName>
+        <fullName>Question__c</fullName>
         <externalId>false</externalId>
-        <label>Employee Examinee</label>
-        <referenceTo>Employee__c</referenceTo>
-        <relationshipLabel>Reviews (Employee Examinee)</relationshipLabel>
-        <relationshipName>Reviews1</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
+        <label>Question</label>
+        <referenceTo>Question__c</referenceTo>
+        <relationshipLabel>Answers Reviewers</relationshipLabel>
+        <relationshipName>Answers_Reviewers</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
         <reparentableMasterDetail>true</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>Employee_Revyuver__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
+        <fullName>Review__c</fullName>
         <externalId>false</externalId>
-        <label>Employee Revyuver</label>
-        <referenceTo>Employee__c</referenceTo>
-        <relationshipLabel>Reviews</relationshipLabel>
-        <relationshipName>Reviews</relationshipName>
-        <required>true</required>
+        <label>Review</label>
+        <referenceTo>Review__c</referenceTo>
+        <relationshipLabel>Answers Reviewers</relationshipLabel>
+        <relationshipName>Answers_Reviewers</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
-        <type>Lookup</type>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
-    <fields>
-        <fullName>Template__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Template</label>
-        <referenceTo>Template__c</referenceTo>
-        <relationshipLabel>Reviews</relationshipLabel>
-        <relationshipName>Reviews</relationshipName>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <label>Review</label>
-    <listViews>
-        <fullName>All</fullName>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
+    <label>Answer Reviewer</label>
     <nameField>
-        <label>Review Name</label>
-        <type>Text</type>
+        <displayFormat>AR-{0000}</displayFormat>
+        <label>Answer Reviewer Name</label>
+        <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Reviews</pluralLabel>
+    <pluralLabel>Answers Reviewers</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>
