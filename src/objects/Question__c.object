@@ -56,56 +56,65 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Email__c</fullName>
-        <externalId>true</externalId>
-        <label>Email</label>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Email</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>First_Name__c</fullName>
+        <fullName>Answer_Options__c</fullName>
         <externalId>false</externalId>
-        <label>First Name</label>
-        <length>100</length>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Last_Name__c</fullName>
-        <externalId>false</externalId>
-        <label>Last Name</label>
-        <length>100</length>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Password__c</fullName>
-        <externalId>false</externalId>
-        <label>Password</label>
-        <length>100</length>
+        <label>Answer Options</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Commentary_Question__c</fullName>
+        <externalId>false</externalId>
+        <label>Commentary Question</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <label>Employee</label>
+    <fields>
+        <fullName>Question__c</fullName>
+        <externalId>false</externalId>
+        <label>Question</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type_Question__c</fullName>
+        <externalId>false</externalId>
+        <label>Type Question</label>
+        <picklist>
+            <picklistValues>
+                <fullName>One from the list</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Text</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Question</label>
     <listViews>
         <fullName>All</fullName>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
     <nameField>
-        <displayFormat>Employee-{0000}</displayFormat>
-        <label>Employee Name</label>
+        <displayFormat>Question-{0000}</displayFormat>
+        <label>Question Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Employees</pluralLabel>
+    <pluralLabel>Questions</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>
