@@ -24,13 +24,5 @@
         <members>*</members>
         <name>ApexClass</name>
     </types>
-    <types>
-        <members>*</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomSite</name>
-    </types>
     <version>37.0</version>
 </Package>
