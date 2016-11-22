@@ -20,3 +20,4 @@
 /SiteRegisterController.cls-meta.xml
 /SiteRegisterControllerTest.cls
 /SiteRegisterControllerTest.cls-meta.xml
+*.cls-meta.xml
